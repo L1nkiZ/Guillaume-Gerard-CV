@@ -13,10 +13,12 @@
   const select = (el, all = false) => {
     el = el.trim()
     // console.log(el);
-    if (all) {
-      return [...document.querySelectorAll(el)]
-    } else {
-      return document.querySelector(el)
+    if(el != undefined && el != "" && el != null){
+      if (all) {
+        return [...document.querySelectorAll(el)]
+      } else {
+        return document.querySelector(el)
+      }
     }
   }
 
